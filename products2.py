@@ -10,10 +10,8 @@ if os.path.isfile('products.csv'): #檢查檔案在不在
 			name, price = line.strip().split(',')
 			products.append([name, price])
 	print(products)
-
 else:
 	print('找不到檔案')
-
 
 #請使用者輸入
 while True:
@@ -29,6 +27,7 @@ print(products)
 #印出所有購買紀錄
 for p in products:
 	print(p[0], '的價格是', p[1])
+	
 #寫入檔案
 with open('products.csv', 'w', encoding='utf-8') as f:
 	f.write('商品,價格\n')
